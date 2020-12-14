@@ -46,7 +46,7 @@ jQuery.fn.select2Buttons = function(options) {
                 }
 
                 // Mark current selection as "picked"
-                if((!options || !options.noDefault) && $(this).attr('selected')){
+                if((!options || !options.noDefault) && $(this).is(':selected')){
                     liHtml.children('a, span').addClass('picked');
                 }
                 ulHtml.append(liHtml);
