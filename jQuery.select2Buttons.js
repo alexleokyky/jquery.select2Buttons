@@ -83,6 +83,10 @@ jQuery.fn.select2Buttons = function(options) {
             }else{
                 buttonsHtml.find('a, span').removeClass('picked');
                 $(this).addClass('picked');
+                select.find('option').each(function(index) {
+                    $(this).removeAttr('selected');
+                });
+                select.val(clickedOption.val());
                 clickedOption.attr('selected', 'selected');
             }
             select.trigger('change');
